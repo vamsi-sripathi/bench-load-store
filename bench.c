@@ -107,7 +107,7 @@ int main (int argc, char **argv)
     exit(1);
   }
 
-  if ((alignment == ALIGN_4K) && ((unsigned long long)p_a & (ALIGN_2M-1) == 0)) {
+  if ((alignment == ALIGN_4K) && (((unsigned long long)p_a & (ALIGN_2M-1)) == 0)) {
       p_a += ALIGN_4K/sizeof(double);
   }
   p_buffer = p_a;
